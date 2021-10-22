@@ -6,19 +6,19 @@ jobs:
   build:
 
     runs-on: windows-latest
-    timeout-minutes: 9999
+    timeout-minutes: 36000
 
     steps:
     - name: Mendownload Ngrok.
       run: |
         Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
-        Invoke-WebRequest https://raw.githubusercontent.com/hackyou19/new_rdp1/main/start1.bat -OutFile start.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/learnseconde/new_rdp1/main/start1.bat -OutFile start.bat
         Invoke-WebRequest https://telegra.ph/file/d6a11d84f0e308f56cf5a.png -OutFile wallpaper.bmp
         Invoke-WebRequest https://telegra.ph/file/d6a11d84f0e308f56cf5a.png -OutFile wallpaper.bat
     - name: Mendownload Launcher.
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/hackyou19/new_rdp1/main/Node.js.lnk -OutFile Node.js.lnk
-        Invoke-WebRequest https://raw.githubusercontent.com/hackyou19/new_rdp1/main/Visual%20Studio%202019.lnk -OutFile "Visual Studio 2019.lnk"
+        Invoke-WebRequest https://raw.githubusercontent.com/learnseconde/new_rdp1/main/Node.js.lnk -OutFile Node.js.lnk
+        Invoke-WebRequest https://raw.githubusercontent.com/learnseconde/new_rdp1/main/Visual%20Studio%202019.lnk -OutFile "Visual Studio 2019.lnk"
     - name: Mengextract Ngrok File.
       run: Expand-Archive ngrok.zip
     - name: Connect Ke Akun Ngrok.
@@ -40,5 +40,5 @@ jobs:
       run: cmd /c start.bat
     - name: Berhasil Dibuat! Anda Bisa Menutup Tab Sekarang.
       run: | 
-        Invoke-WebRequest https://github.com/hackyou19/new_rdp1/raw/main/loop1.ps1 -OutFile loop.ps1
+        Invoke-WebRequest https://github.com/learnseconde/new_rdp1/raw/main/loop1.ps1 -OutFile loop.ps1
         ./loop.ps1
